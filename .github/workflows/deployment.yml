@@ -1,5 +1,5 @@
 name: "Project 2 deployment"
-on: push
+on: [push , workflow_dispatch]
 jobs:
   linting:
     runs-on : "ubuntu-latest"
