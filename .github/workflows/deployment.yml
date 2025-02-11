@@ -2,7 +2,7 @@ name: "Project 2 deployment"
 on: push
 jobs:
   linting:
-    runs-on : "ubuntu-latest"
+    runs-on : ubuntu-latest
     steps:
       - name: Get code
         uses: actions/checkout@v3
@@ -16,7 +16,7 @@ jobs:
         uses: npm run lint
   Testing:
     needs: linting
-    runs-on: "ubuntu-latest"
+    runs-on: ubuntu-latest
     steps:
       - name: Get code
         uses: actions/checkout@v3
@@ -30,7 +30,7 @@ jobs:
         uses: npm run test
   Deployment:
     needs: testing
-    runs-on: "ubuntu-latest"
+    runs-on: ubuntu-latest
     steps:
       - name: Get code
         uses: actions/checkout@v3
