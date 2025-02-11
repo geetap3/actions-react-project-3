@@ -11,9 +11,9 @@ jobs:
         with:
           node-version: 18
       - name: Install dependencies
-        uses: npm ci
+        run: npm ci
       - name: Run linting
-        uses: npm run lint
+        run: npm run lint
   Testing:
     needs: linting
     runs-on: ubuntu-latest
@@ -25,9 +25,9 @@ jobs:
         with:
           node-version: 18
       - name: Install dependencies
-        uses: npm ci
+        run: npm ci
       - name: Run test command
-        uses: npm run test
+        run: npm run test
   Deployment:
     needs: testing
     runs-on: ubuntu-latest
@@ -39,6 +39,6 @@ jobs:
         with:
           node-version: 18
       - name: Install dependencies
-        uses: npm ci
+        run: npm ci
       - name: Run deployment
-        uses: npm run build
+        run: npm run build
