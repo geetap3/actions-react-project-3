@@ -1,4 +1,4 @@
-name: "Project 2 deployment"
+name: Project 2 deployment
 on: push
 jobs:
   linting:
